@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #9a4b7b;
+    --primary-color-dark: #782a59;
+    --text-dark: #333333;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR SECTION CODE START  */
+
+img {
+    display: flex;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+nav {
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+}
+
+.nav-header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+.nav-logo a {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo a:hover {
+    transform: scale(1.1);
+}
+
+.nav-logo .logo-dark {
+    display: none;
+}
+
+.nav-menu-btn {
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav-links {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    transition: transform 0.5s;
+    z-index: -1;
+}
+
+.nav-links.open {
+    transform: translateY(100%);
+}
+
+.nav-links a {
+    font-weight: 500;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+/* NAVBAR SECTION CODE END  */
+
+
+/* HEADER SECTION CODE START  */
+
+header {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: grid;
+    gap: 4rem 1rem;
+}
+
+.header-img {
+    overflow: hidden;
+}
+
+.header-img img {
+    max-width: 450px;
+    margin-inline: auto;
+    border-radius: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.header-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.header-content p {
+    font-weight: 500;
+    margin-bottom: 2rem;
+    line-height: 1.75rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.header-btn {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.header-btn button {
+    padding: 1rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.header-btn button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.header-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header-socials a {
+    padding: 8px 10px;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+}
+
+.header-socials a:hover {
+    background-color: var(--primary-color-dark);
+}
+
+@media (min-width: 786px) {
+    nav {
+        position: static;
+        padding: 2rem 1rem 1rem;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-header {
+        padding: 0;
+        background: transparent;
+    }
+
+    .nav-logo a img {
+        max-width: 125px;
+    }
+
+    .nav-logo .logo-dark {
+        display: flex;
+    }
+
+    .nav-logo .logo-white {
+        display: none;
+    }
+
+    .nav-menu-btn {
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+        width: fit-content;
+        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none !important;
+    }
+
+    .nav-links a {
+        font-weight: 600;
+        color: var(--text-dark);
+    }
+
+    .nav-links a:hover {
+        color: var(--primary-color);
+    }
+
+    header {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    .header-content {
+        grid-area: 1/1/2/2;
+    }
+
+    .header-content :is(h2, h1, .header-btn) {
+        text-align: left;
+    }
+
+    .header-socials {
+        justify-content: flex-start;
+    }
+
+}
