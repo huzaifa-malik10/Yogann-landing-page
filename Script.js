@@ -53,3 +53,8 @@ ScrollReveal().reveal(".header-socials li", {
     delay: 2500,
     interval: 500,
 });
+
+ScrollReveal().reveal(".service-card" , {
+    ...scrollRevealOption,
+    interval: 500,
+});
