@@ -30,31 +30,63 @@ ScrollReveal().reveal(".header-img img", {
 
 ScrollReveal().reveal(".header-content h2", {
     ...scrollRevealOption,
-    delay: 500, 
+    delay: 500,
 });
 
 ScrollReveal().reveal(".header-content h1", {
     ...scrollRevealOption,
-    delay: 1000, 
+    delay: 1000,
 });
 
 ScrollReveal().reveal(".header-content p", {
     ...scrollRevealOption,
-    delay: 1500, 
+    delay: 1500,
 });
 
 ScrollReveal().reveal(".header-btn", {
     ...scrollRevealOption,
-    delay: 2000, 
+    delay: 2000,
 });
 
 ScrollReveal().reveal(".header-socials li", {
     ...scrollRevealOption,
-    delay: 2500,
-    interval: 500,
+    delay: 2000,
+    interval: 900,
 });
 
-ScrollReveal().reveal(".service-card" , {
+ScrollReveal().reveal(".service-card", {
     ...scrollRevealOption,
-    interval: 500,
+    interval: 600,
+});
+ScrollReveal().reveal(".contact-heading h1", {
+    ...scrollRevealOption,
+    delay: 2000,
+});
+
+ScrollReveal().reveal(".contact-heading h2", {
+    ...scrollRevealOption,
+    delay: 2000,
+});
+
+ScrollReveal().reveal(".contact-content h3", {
+    ...scrollRevealOption,
+    origin: "left",
+    delay: 2000,
+});
+
+ScrollReveal().reveal(".contact-form input", {
+    ...scrollRevealOption,
+    interval: 150,
+    delay: 2000,
+});
+
+ScrollReveal().reveal(".contact-form button", {
+    ...scrollRevealOption,
+    delay: 2000,
+});
+
+ScrollReveal().reveal(".contact-form textarea", {
+    ...scrollRevealOption,
+    delay: 2000,
+    interval: 1000,
 });
