@@ -58,35 +58,41 @@ ScrollReveal().reveal(".service-card", {
     ...scrollRevealOption,
     interval: 600,
 });
+const scrollRevealOption = {
+    distance: "50px",
+    duration: 800,
+    easing: "ease-out",
+    reset: false
+};
+
 ScrollReveal().reveal(".contact-heading h1", {
     ...scrollRevealOption,
-    delay: 2000,
+    delay: 100
 });
 
 ScrollReveal().reveal(".contact-heading h2", {
     ...scrollRevealOption,
-    delay: 2000,
+    delay: 200
 });
 
 ScrollReveal().reveal(".contact-content h3", {
     ...scrollRevealOption,
     origin: "left",
-    delay: 2000,
+    delay: 300
 });
 
 ScrollReveal().reveal(".contact-form input", {
     ...scrollRevealOption,
-    interval: 150,
-    delay: 2000,
-});
-
-ScrollReveal().reveal(".contact-form button", {
-    ...scrollRevealOption,
-    delay: 2000,
+    interval: 100,
+    delay: 200
 });
 
 ScrollReveal().reveal(".contact-form textarea", {
     ...scrollRevealOption,
-    delay: 2000,
-    interval: 1000,
+    delay: 300
+});
+
+ScrollReveal().reveal(".contact-form button", {
+    ...scrollRevealOption,
+    delay: 400
 });
